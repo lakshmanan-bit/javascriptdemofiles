@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>API Call Example</title>
+    </head>
+    <body>
+        <!-- <button onclick="fetchData()">Fetch Data</button>
+  <button onclick="fetchData2()">Fetch Data2</button>
+
+  <script>
+    function fetchData() {
+      // Replace 'https://api.example.com/data' with your actual API endpoint
+      fetch('https://www.javascripttutorial.net/javascript-dom/')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          // Process the data received from the API
+          console.log(data);
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+    }
+  </script>
+
+  <script>
+      function fetchData2() {
+           
+        fetch('https://www.google.com')
+        .then(response => {
+            if(!response.ok) {
+                throw new Error(`HTTP  error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('error fetching data:', error);
+        });
+      }
+
+        const open = document.querySelector('#open-modal');
+        const modal = document.querySelector('.modal-container');
+        const closeModalBtn = document.querySelector('#close');
+
+        // open modal
+        open.addEventListener('click', () => {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        // or 
+        // document.body.style.position = 'fixed'
+        })
+
+        // close modal
+        closeModalBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'visible';
+        // or
+        // document.body.style.position = 'static';
+        })
+        open.addEventListener('click', ()   => {
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hiddem';
+        }) -->
+        <!-- 
+  </script> -->
+        <!-- 
+  <button class="btn">Test</button> -->
+        <script>
+      
+
+
+function greet(name) {
+
+console.log(`Hello, ${name}! My name is ${this.name}.`);
+
+}
+
+
+const person = {
+
+name: 'John'
+
+};
+
+greet.call(person, 'Alice');
+
+
+
+
+
+for(vari=0; i < 10; i++){
+  var number = 0;
+  number++;
+
+  console.log(number);
+}
+for (var i = 0; i < 5; i++) {
+var number= 0
+number++
+console.log(number);
+}
+
+
+// Array destriction Destructuring Destrruicting
+
+
+const [firstname, lastname] = ['john', 'doe'];
+
+console.log(firstname);
+console.log(lastname);
+
+// it is called Array Destructuring Destructuring
+
+
+// Object Destructring
+
+
+const {age, city, name} = {age: '20', city: 'chennai', name: 'lakshmanan'};
+
+console.log(age);
+console.log(city);
+console.log(name);
+
+// CCC refrence code
+
+$(document).ready(function () {
+    var menuButton = $('#menuButton');
+    var menuModal = $('#menuModal');
+    var menuIcon = $("#menuicon");
+
+    menuButton.click(function () {
+        menuModal.toggle();
+        var newRightPosition = menuModal.is(':visible') ? 0 : -300;
+        menuModal.animate({
+            right: newRightPosition
+        }, 300);
+    });
+    menuCloseButton.click(function () {
+        var newRightPosition = menuModal.is(':visible') ? -300 : 0;
+        menuModal.animate({
+            right: newRightPosition
+        }, 300, function () {
+            menuModal.toggle();
+        });  
+    });
+
+  });
+
+
+  var referrer = document.referrer;
+  console.log(referrer);
+
+
+  "use strict";
+!function(s) {
+    jQuery(document).ready(function() {
+        jQuery(window).scroll(function() {
+            0 < s(this).scrollTop() ? s("#top-bar").addClass("sticky") : s("#top-bar").removeClass("sticky")
+        }),
+        jQuery(window).scroll(function() {     
+            0 < s(this).scrollTop() ? s("#about-header").addClass("sticky-about") : s("#about-header").removeClass("sticky-about")
+        }),
+        s("#mobile-menu--btn a").click(function() {
+            s(".main-menu-sidebar").addClass("menu-active"),
+            s(".menu-overlay").addClass("active-overlay"),
+            s(this).toggleClass("open")
+        }),
+        s(".close-menu-btn").click(function() {
+            s(".main-menu-sidebar").removeClass("menu-active"),
+            s(".menu-overlay").removeClass("active-overlay")
+        }),
+        s(function() {
+            var a = s(".nav-links > li.has-menu  ul"), t = s(".nav-links > li.has-menu  small");
+            a.hide(),
+            t.click(function(e) {
+                e.preventDefault(),
+                s(this).hasClass("active") ? (s(this).removeClass("active"),
+                s(this).next().stop(!0, !0).slideUp("normal")) : (t.removeClass("active"),
+                a.filter(":visible").slideUp("normal"),
+                s(this).addClass("active").next().stop(!0, !0).slideDown("normal"))
+            })
+        }),
+        s(".nav-links > li.has-menu  small ").attr("href", "javascript:;");
+        var a = s("#menu");
+        s(document).mouseup(function(e) {
+            a.is(e.target) || 0 !== a.has(e.target).length || (a.removeClass("menu-active"),
+            s(".menu-overlay").removeClass("active-overlay"))
+        }),
+        s(function() {
+            s("#hero-banner .container .hero-caption a.btn-cta, .caption a").click(function() {
+                if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
+                    var e = s(this.hash);
+                    if ((e = e.length ? e : s("[name=" + this.hash.slice(1) + "]")).length)
+                        return s("html, body").animate({
+                            scrollTop: e.offset().top - 180
+                        }, 1e3),
+                        !1
+                }
+            })
+        }),
+        s(function() {
+            s(".archive-box a").click(function() {
+                if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
+                    var e = s(this.hash);
+                    if ((e = e.length ? e : s("[name=" + this.hash.slice(1) + "]")).length)
+                        return s("html, body").animate({
+                            scrollTop: e.offset().top - 110
+                        }, 1e3),
+                        !1
+                }
+            })
+        }),
+        s(function() {
+            s("#tech-features .tech-cta a , #btn-down a, #inner-header .header-text a.btn-cta, #lp-header .lp-header--cta a.btn-cta, .feature-text .btn-cta , .view-btn-wrap a, .hire-dev-v2").click(function() {
+                if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
+                    var e = s(this.hash);
+                    if ((e = e.length ? e : s("[name=" + this.hash.slice(1) + "]")).length)
+                        return s("html, body").animate({
+                            scrollTop: e.offset().top - 180
+                        }, 1e3),
+                        !1
+                }
+            })
+        }),
+        s(document).ready(function() {
+            s(".faq__accordion .faq-wrap > .accordion-heading").on("click", function(e) {
+                s(this).hasClass("active") ? (s(this).removeClass("active"),
+                s(this).siblings(".faq__accordion .content").slideUp(200)) : (s(".faq__accordion .faq-wrap > .accordion-heading").removeClass("active"),
+                s(this).addClass("active"),
+                s(".faq__accordion .content").slideUp(200),
+                s(this).siblings(".faq__accordion .content").slideDown(200)),
+                e.preventDefault()
+            })
+        }),
+        s(document).ready(function() {
+            s(".schema-faq-question").on("click", function(e) {
+                s(this).hasClass("active") ? (s(this).removeClass("active"),
+                s(this).siblings(".schema-faq-answer").slideUp(200)) : (s(".schema-faq-question").removeClass("active"),
+                s(this).addClass("active"),
+                s(".schema-faq-answer").slideUp(200),
+                s(this).siblings(".schema-faq-answer").slideDown(200)),
+                e.preventDefault()
+            })
+        }),
+        s(".collapsible").click(function() {
+            s(".content").slideToggle().toggleClass("active"),
+            s(this).toggleClass("active-header"),
+            console.log("test")
+        }),
+        setTimeout(function() {
+            jQuery(".modal-overlay").addClass("show")
+        }, 1e3),
+        s(".team-box a, .team-photo a").click(function(e) {
+            var a = s(this).attr("data-my-element")
+              , t = s(".modal-overlay[data-my-element = " + a + "], .modal[data-my-element = " + a + "]");
+            e.preventDefault(),
+            t.addClass("active"),
+            s("html").addClass("fixed")
+        }),
+        s(".close-modal").click(function() {
+            var e = s(".modal-overlay, .modal");
+            s("html").removeClass("fixed"),
+            e.removeClass("active")
+        }),
+        s("#close-notice, #accept-cookie").click(function(e) {
+            e.preventDefault(),
+            s("#cookie-notice").removeClass("slide-up"),
+            s("#cookie-notice").addClass("slide-down")
+        })
+    })
+}(jQuery);
+        </script>
+    </body>
+</html>

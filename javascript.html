@@ -1,0 +1,236 @@
+<html>
+    <head>
+        <title>Demo exprienment work</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+
+        <p id="demo">Hi </p>
+        <!-- <span>fjddsjfdk</span> -->
+        <!-- multiple button come in ndynamically using Js -->
+
+        <!-- <div class="container-fluid" id="buttons"></div>
+        <script>
+            document.getElementById("demo").innerHTML = "Hello world";
+
+            function createButton (){
+                for(i=0;i<=11; i++){
+                    var button = document.createElement('<button type="text" class="button">Button List</button>');
+                    var buttonDiv = document.getElementById("buttons");
+                    buttonDiv.appendChild(button);
+                } 
+            }
+            document.body.addEventListener("load", createButton(), false);
+
+        </script> -->
+
+        <!-- <div id="button-container"></div>
+        <div id="button2"></div>
+        <button onclick="myFunction(10)">Create Button</button>
+        <button onclick="myfuncution2(10)">Create Button</button>
+        <script>
+        function myFunction(e){
+            for(let i = 0; i< e; i++){
+              let newBtn = document.createElement('button');
+              newBtn.innerText="Click me";
+              document.querySelector('#button-container').appendChild(newBtn);
+            }
+          }
+        </script>
+
+        <script>
+            function myfuncution2(e){
+                for(i=0; i< e; i++){
+                    let newbutton = document.createElement('button');
+                    newbutton.innerHTML = "click";
+                    document.querySelector("#button2").appendChild(newbutton);
+                }
+            }
+        </script> -->
+
+        <div class="dynamic-button" id="button-container"></div>
+
+        <button onclick="Clickme(1)" id="click-btn">Click me</button>
+
+
+        <script>
+            function Clickme(e){
+
+                
+              for(i=0; i<e; i++){
+                let Clickbtnn = document.createElement('button');
+
+                Clickbtnn.innerHTML = "click Again";
+
+                document.querySelector("#button-container").appendChild(Clickbtnn);
+
+              }
+            }
+			
+			
+			function ClickmeTwo(v){
+				for(i=0; i < v; i++){
+					let ClickmeTwo = document.getElementById('button');
+					ClickmeTwo.innerHTML = "Hello World";
+					document.querySelector("#button-containerTwo").appendChild(ClickmeTwo);
+				}
+			}
+        </script>
+
+     <script>
+         var name = "lakshmanan";
+		 name.pop();
+         for(i=0; i < name; i++){
+             console.log(name);
+         }
+		 
+		 function submit() {
+			const errors = document.getElementById('errors');
+			const firstname = document.getElementById('firstname');
+			const lastname = document.getElementById('lastname');
+			if (firstname.value === lastname.value) {
+				errors.innerHTML = 'Firstname cannot equal to Lastname';
+				errors.style.display = 'block';
+				firstname.classList.add('error');
+			}
+			else {
+				errors.style.display = 'none';
+				firstname.classList.remove('error');
+				document.getElementById('errors').innerHTML = '';
+				errors.style.display = 'none';
+				firstname.classList.remove('error');
+				document.getElementByid('errors').innerHTML = '';
+			}
+			return false;
+		}
+        
+		
+		function submittwo(){
+		   
+		   const errortwo = document.getElementById('error');
+           const firstnametwo = document.getElementById('firstnametwo');
+           const lastnametwo = document.getElementById('lastnametwo');
+
+			if(firstnametwo.value === lastnametwo.value){
+				errortwo.innerHTML = 'firstname can not be equalto lastname';
+				errortwo.style.display = 'block';
+				firstnametwo.classList.add('error');
+			}
+			else {
+				errortwo.style.display = 'none';
+				errortwo.classList.remove('error');
+				errortwo.innerHTML = '';
+			}			
+		}
+		
+		// set time out program 08-08-2024
+		
+		
+		for (var i = 0; i < 3; i++) {
+		  setTimeout(() => console.log(i), 1);
+		}
+
+		for (let i = 0; i < 3; i++) {
+		  setTimeout(() => console.log(i), 1);
+		}
+
+
+
+     </script>
+
+     <h1>
+
+
+14. How absolute, relative, static, and fixed positions are different from each other?
+Static: It is a default position, even if we do not specify any position or value for elements, the system automatically sets the default values, 
+and they are unchangeable. The system follows first come first out strategy. That means whatever comes first that will be displayed first.
+
+Syntax: position:static
+
+Relative: If you want to change the position of the elements, you can use relative. When you are changing elements' positions to a relative, 
+it changes the position of the elements by using the below attributes. Attributes are as follows
+
+Alignment: In this attribute, you can give the values like top, bottom, right or left according to that element position changes. 
+
+Size: Mention in the pixels.  
+
+Let us consider one example below.  </h1>
+
+<html>
+<div id="one"></div>
+<div id="two"></div>
+<style>
+#one{position:absolute;right:100px;}
+#two{position:relative;left:150px;}
+</style>
+<h1 id="two">Two</h1>
+<h1 id="one">One</h1>
+</html>
+Output
+
+One 
+    Two 
+Absolute: User can change the element position, and generally absolute will place relative to the parent. 
+If a parent is not available to the page itself then default it placed as a relative position. 
+
+Syntax:
+
+position:absolute
+Fixed: It will place the relative element to the browser window or viewport. 
+When scrolling happens viewport doesn’t change. So the position is fixed for the element.
+
+Syntax:
+
+position:fixed
+
+
+9811281505
+
+    </body>
+	
+	
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+47,300 Salery credited to ICICI Bank
+-1,500 = 45,800 Stock market  
+45,800 + 3,000 = 48,800 India post Office Credited
+
+Auguest 01 to 31 total Amount 48,800  
+-17,643(personal loan) 
+-5,100 (Cow Loan) 
+-1,000 pandu sent 
+-6,486 House Rent
+-5,217 HDFC Credit card
+
+ 48,800 - 35,446 = 13,354
+ 
+ Balance 3,000 (27-08-2024)
+ 
+ 
+
+
+
+
+
+
